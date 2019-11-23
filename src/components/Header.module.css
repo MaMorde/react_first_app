@@ -1,0 +1,7 @@
+.header {
+  background: hsl(348, 83%, 47%);
+  grid-area: h;
+}
+.logo {
+  width: 50px;
+}
