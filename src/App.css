@@ -10,3 +10,7 @@
   width: 1200px;
 }
 
+.app-wrapper-content {
+  background: springgreen;
+  grid-area: c;
+}
