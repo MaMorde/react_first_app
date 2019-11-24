@@ -8,12 +8,16 @@ const MyPosts = () => {
       My posts
         <div>
         New posts
+        <div>
+          <textarea></textarea>
+          <button>Add post</button>
         </div>
-      <div className={s.posts}>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+
+        <div className={s.posts}>
+          <Post message='sssss' />
+          <Post message='its my first post' />
+
+        </div>
       </div>
     </div>
 
