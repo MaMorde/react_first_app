@@ -8,7 +8,7 @@ const Post = (props) => {
       <img src='https://www.meme-arsenal.com/memes/7bdea6754f999b50e9577596f09197fb.jpg'></img>
       {props.message}
       <div>
-        <span>Like</span>
+        <span>Likes</span> {props.likesCount}
       </div>
 
     </div>
