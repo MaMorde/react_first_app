@@ -1,4 +1,12 @@
 .nav {
   background: burlywood;
   grid-area: n;
+  padding: 20px;
+}
+.item a{
+  color: white;
+  text-decoration: none;
+}
+.item a.active{
+  color: sienna;
 }
