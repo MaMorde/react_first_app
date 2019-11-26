@@ -1,7 +1,8 @@
 .item {
-  color: palegoldenrod
+  color: palegoldenrod;
 }
 .item img {
   width: 50px;
   border-radius: 50px;
 }
+
