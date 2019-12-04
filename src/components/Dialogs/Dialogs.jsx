@@ -2,7 +2,6 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogsItem'
 import Message from './Message/Message'
-import { NavLink } from "react-router-dom"
 
 
 const Dialogs = (props) => {
@@ -12,10 +11,12 @@ const Dialogs = (props) => {
     let newMessageElement = React.createRef();
 
     let addMessage = () => {
-        let message = newMessageElement.current.value;
-        alert(message);
+        props.addMessage();
     }
-
+    let onPostChange = () => {
+        let text = newMessageElement.current.value;
+        props.updateNewMessageText(text);
+    }
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
@@ -23,7 +24,7 @@ const Dialogs = (props) => {
             </div>
             <div className={s.messages}>
                 {messagesElements}
-                <textarea ref={newMessageElement}></textarea>
+                <textarea ref={newMessageElement} value={props.newMessageText} onChange={onPostChange}></textarea>
                 <button onClick={addMessage}>Отправить</button>
             </div>
 
