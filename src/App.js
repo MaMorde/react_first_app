@@ -8,10 +8,11 @@ import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import { Route } from "react-router-dom";
+import store from './redux/state';
 
 
 
-function App(props) {
+const App = (props) => {
 
   return (
 
@@ -21,10 +22,7 @@ function App(props) {
       <div className='app-wrapper-content'>
         <Route path="/dialogs"
           render={() => <Dialogs
-            state={props.state.dialogsPage}
-            addMessage={props.addMessage}
-            updateNewMessageText={props.updateNewMessageText}
-            newMessageText={props.state.dialogsPage.newMessageText} />} />
+            store={props.store} />} />
         <Route path="/profile"
           render={() => <Profile
             dispatch={props.dispatch}
